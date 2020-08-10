@@ -5,7 +5,7 @@ Find the smallest common multiple of the provided parameters that can be evenly 
 The range will be an array of two numbers that will not necessarily be in numerical order.
 
 For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6.
-*/ */
+*/
 
 let primeNumbers = [
   2,
@@ -64,8 +64,6 @@ function smallestCommons(arr) {
         quotient = quotient / denominator;
       }
       if (minFactors[denominator]) {
-        console.log(denominator, counter);
-        console.log("here");
         if (counter > minFactors[denominator]) {
           minFactors[denominator] = counter;
         }
@@ -86,6 +84,6 @@ function smallestCommons(arr) {
   return product;
 }
 
-smallestCommons([1, 5] === 60);
-smallestCommons([10, 2] === 2520);
-smallestCommons([23, 18] === 6056820);
+console.log(smallestCommons([1, 5]) === 60);
+console.log(smallestCommons([10, 2]) === 2520);
+console.log(smallestCommons([23, 18]) === 6056820);
