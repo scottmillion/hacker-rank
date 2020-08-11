@@ -1,37 +1,24 @@
-/*
-Fill in the object constructor with the following methods below:
-
-getFirstName()
-getLastName()
-getFullName()
-setFirstName(first)
-setLastName(last)
-setFullName(firstAndLast)
-Run the tests to see the expected output for each method. The methods that take an argument must accept only one argument and it has to be a string. These methods must be the only available means of interacting with the object.
-
-*/
-
 var Person = function (firstAndLast) {
   // Only change code below this line
   // Complete the method below and implement the others similarly
 
   this.getFullName = function () {
     if (this.fullName === undefined) {
-      this.fullName = firstAndLast;
+      this.fullName = this.getFirstName() + " " + this.getLastName();
     }
     return this.fullName;
   };
 
   this.getLastName = function () {
     if (this.lastName === undefined) {
-      this.lastName = this.getFullName().split(" ")[1];
+      this.lastName = firstAndLast.split(" ")[1];
     }
     return this.lastName;
   };
 
   this.getFirstName = function () {
     if (this.firstName === undefined) {
-      this.firstName = this.getFullName().split(" ")[0];
+      this.firstName = firstAndLast.split(" ")[0];
     }
     return this.firstName;
   };
@@ -45,7 +32,8 @@ var Person = function (firstAndLast) {
   };
 
   this.setFullName = function (firstAndLast) {
-    this.fullName = firstAndLast;
+    this.firstName = firstAndLast.split(" ")[0];
+    this.lastName = firstAndLast.split(" ")[1];
   };
 
   return firstAndLast;
