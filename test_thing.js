@@ -1,15 +1,7 @@
-let arr = ["pizza", 5, 24];
-/*
-for (let ele of arr) {
-  console.log(ele);
-}
-*/
-let newArr = arr.map((x, y, z) => {
-  console.log("Element: " + x);
-  console.log("At Index: " + y);
-  console.log("Array: " + z);
-  return x + 5;
-});
+let arr = [["pizza"], 5, 24];
 
-console.log(newArr);
-console.log(arr);
+if (arr[0][0][0][0]) {
+  console.log("yes");
+}
+
+console.log(Array.isArray(arr[0][0]));
